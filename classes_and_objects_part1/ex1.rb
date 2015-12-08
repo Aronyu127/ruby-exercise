@@ -26,9 +26,22 @@ class Car
       end  	
  end
 
+ def chage_color(color)
+ 	
+ 	puts " your color  from #{@color} change to #{color}"
+ 	@color=color
+ end
+ def check_color
+ 	puts "the car's color now is #{@color}"
+ end
+ 
+ def check_year
+ 	puts "the year is #{@year} you are not allow to change it"
+ end	
+
 end	
 
-popocar=Car.new(2015,"red","sharp")
+popocar=Car.new(2015,"blue","sharp")
 
 popocar.check_speed
 popocar.speed_up(50)
@@ -38,3 +51,6 @@ popocar.brake
 popocar.check_speed
 popocar.shut_down
 popocar.check_speed
+popocar.chage_color("red")
+popocar.check_color
+popocar.check_year
