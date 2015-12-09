@@ -1,4 +1,13 @@
 class Vehicle
+
+	@@number_of_vehicles=0
+
+	def self.number_of_vehicles
+		puts "you have created #{@@number_of_vehicles} vehicle "
+	end
+	def initialize
+      @@number_of_vehicles+=1
+	end	
     def self.gas_mileage(gallons, miles)
     puts "#{miles / gallons} miles per gallon of gas"
     end
@@ -29,7 +38,8 @@ end
 
 class MyTruck < Vehicle
  car_price = 20000
-  
-
-
 end	
+
+a=MyCar.new
+b=MyTruck.new
+Vehicle.number_of_vehicles
