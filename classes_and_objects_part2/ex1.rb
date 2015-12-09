@@ -17,8 +17,16 @@ class Vehicle
     end
 end
 
+module Speed
 
-
+  def initialize
+  	@speed = 0
+  end
+  def speed_up(x)
+     @speed+=x.to_i
+     puts "no your speed is #{@speed}"
+  end   
+end
 
 
 Vehicle.gas_mileage(20,250)
@@ -32,6 +40,7 @@ newcar.model="sharp"
 newcar.to_s
 
 class MyCar < Vehicle
+ include Speed	
  car_price = 10000
 end 
 
@@ -43,3 +52,5 @@ end
 a=MyCar.new
 b=MyTruck.new
 Vehicle.number_of_vehicles
+a.speed_up(30)
+a.speed_up(30)
